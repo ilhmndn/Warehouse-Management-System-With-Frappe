@@ -1,0 +1,28 @@
+2019-06-22 07:31:33,733 INFO getting app erpnext-training
+2019-06-22 07:31:33,862 INFO git clone https://devmis004@dev.azure.com/devmis004/erpnext-training/_git/erpnext-training  --depth 1 --origin upstream
+2019-06-22 07:32:02,877 INFO installing erpnext
+2019-06-22 07:32:02,877 INFO ./env/bin/pip install -q  -e ./apps/erpnext 
+2019-06-22 07:33:29,348 INFO bench build --app erpnext
+2019-06-25 03:58:12,080 INFO creating new app libraryku
+2019-06-25 03:59:16,427 INFO installing libraryku
+2019-06-25 03:59:16,427 INFO ./env/bin/pip install -q  -e ./apps/libraryku 
+2019-06-25 10:07:46,587 DEBUG Clearing Redis Cache...
+2019-06-25 10:07:46,607 INFO /usr/bin/redis-cli -p 13000 FLUSHALL
+2019-06-25 10:07:46,684 DEBUG Clearing Redis DataBase...
+2019-06-25 10:07:46,685 INFO /usr/bin/redis-cli -p 13000 FLUSHDB
+2019-06-25 10:07:46,698 DEBUG Backing up Virtual Environment
+2019-06-25 10:07:46,699 DEBUG Setting up a New Virtual python3.6 Environment
+2019-06-25 10:07:46,701 INFO /usr/bin/virtualenv --python /usr/bin/python3.6 /home/ilhmndn/frappe-training/env
+2019-06-25 10:08:02,080 INFO /home/ilhmndn/frappe-training/env/bin/pip install --upgrade pip
+2019-06-25 10:08:03,814 INFO /home/ilhmndn/frappe-training/env/bin/pip install --upgrade setuptools
+2019-06-25 10:08:06,193 INFO /home/ilhmndn/frappe-training/env/bin/pip install -e /home/ilhmndn/frappe-training/apps/frappe
+2019-06-25 10:11:09,500 INFO /home/ilhmndn/frappe-training/env/bin/pip install -e /home/ilhmndn/frappe-training/apps/erpnext
+2019-06-25 10:12:45,715 INFO /home/ilhmndn/frappe-training/env/bin/pip install -e /home/ilhmndn/frappe-training/apps/libraryku
+2019-06-25 10:12:51,462 DEBUG Migration Successful to /usr/bin/python3.6
+2019-06-27 02:08:49,267 INFO creating new app warehouse_management
+2019-06-27 02:10:01,424 INFO installing warehouse_management
+2019-06-27 02:10:01,424 INFO ./env/bin/pip install -q  -e ./apps/warehouse_management 
+2019-06-27 02:17:06,436 INFO creating new app warehouse
+2019-06-27 02:17:42,856 INFO installing warehouse
+2019-06-27 02:17:42,857 INFO ./env/bin/pip install -q  -e ./apps/warehouse 
+2019-06-27 02:17:55,673 INFO creating new app warehouse

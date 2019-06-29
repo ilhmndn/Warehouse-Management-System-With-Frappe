@@ -1,0 +1,5 @@
+frappe
+erpnext
+libraryku
+warehouse_management
+warehouse

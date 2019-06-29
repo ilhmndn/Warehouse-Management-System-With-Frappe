@@ -1,0 +1,308 @@
+[ERROR] 2019-06-29 10:34:35,531 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-009\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cef4d6fe7e\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-009\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"banyaknya\":\"1\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:34:33.248Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    frappe.msgprint("success to create Pesanan with Doc No. {}".format(new_pesanan.name))
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang = frappe.get_doc("Master Barang", i.kode_barang)
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:36:38,496 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-009\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cef4d6fe7e\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-009\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"banyaknya\":\"1\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:34:33.248Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    frappe.msgprint("success to create Pesanan with Doc No. {}".format(new_pesanan.name))
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang = frappe.get_doc("Master Barang", i.kode_barang)
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:37:21,790 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-009\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cef4d6fe7e\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:34:33.038716\",\"modified\":\"2019-06-29 10:34:33.038716\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-009\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"banyaknya\":\"1\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:34:33.248Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    frappe.msgprint("success to create Pesanan with Doc No. {}".format(new_pesanan.name))
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang = frappe.get_doc("Master Barang", i.kode_barang)
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:39:58,024 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-010\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5be35deb57\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-010\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:39:55.635Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    self.change_jumlah_barang()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang.jumlah = ''
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:44:08,948 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-010\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5be35deb57\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-010\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:39:55.635Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    self.change_jumlah_barang()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang.jumlah = ''
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:44:47,722 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-010\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"1500000\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5be35deb57\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:39:55.442225\",\"modified\":\"2019-06-29 10:39:55.442225\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-010\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-001\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"satuan\":\"Ton\",\"harga\":\"1500000\",\"jumlah\":\"4\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:44:43.191Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    self.change_jumlah_barang()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang.jumlah = '0'
+NameError: name 'jumlah' is not defined
+[ERROR] 2019-06-29 10:47:59,011 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-007\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:47:56.073526\",\"modified\":\"2019-06-29 10:47:56.073526\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-29\",\"total_harga\":\"740000\",\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"37cdaab22c\",\"owner\":\"Administrator\",\"creation\":\"2019-06-29 10:47:56.073526\",\"modified\":\"2019-06-29 10:47:56.073526\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-007\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-003\",\"nama_barang\":\"Batu Ringan Citicon\",\"jenis_barang\":\"Bata Ringan\",\"satuan\":\"M3\",\"harga\":\"740000\",\"jumlah\":\"45\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-29T03:47:56.819Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 34, in on_approve
+    self.change_jumlah_barang()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 40, in change_jumlah_barang
+    barang.jumlah = '0'
+NameError: name 'jumlah' is not defined

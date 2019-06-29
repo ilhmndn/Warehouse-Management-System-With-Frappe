@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include libraryku *.css
+recursive-include libraryku *.csv
+recursive-include libraryku *.html
+recursive-include libraryku *.ico
+recursive-include libraryku *.js
+recursive-include libraryku *.json
+recursive-include libraryku *.md
+recursive-include libraryku *.png
+recursive-include libraryku *.py
+recursive-include libraryku *.svg
+recursive-include libraryku *.txt
+recursive-exclude libraryku *.pyc
