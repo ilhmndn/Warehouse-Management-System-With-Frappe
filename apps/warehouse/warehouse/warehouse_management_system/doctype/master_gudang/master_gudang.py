@@ -14,6 +14,7 @@ class MasterGudang(Document):
 #     barang = []
 #     for t in doc_a.get("request_line_barang"):
 #         list1.append({
+# 			'kode_barang'(b):t.kode_barang(a),
 #         	'nama_barang'(b):t.nama_barang(a),
 # 			'jenis_barang'(b):t.jenis_barang(a),
 # 			'qty'(b):t.qty(a),

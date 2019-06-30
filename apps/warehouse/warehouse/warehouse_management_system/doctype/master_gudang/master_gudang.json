@@ -316,7 +316,7 @@
  "issingle": 0,
  "istable": 0,
  "max_attachments": 0,
- "modified": "2019-06-30 07:41:55.119800",
+ "modified": "2019-06-30 19:34:14.636666",
  "modified_by": "Administrator",
  "module": "Warehouse Management System",
  "name": "Master Gudang",
@@ -343,7 +343,7 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
+ "quick_entry": 0,
  "read_only": 0,
  "read_only_onload": 0,
  "search_fields": "nama_gudang",
