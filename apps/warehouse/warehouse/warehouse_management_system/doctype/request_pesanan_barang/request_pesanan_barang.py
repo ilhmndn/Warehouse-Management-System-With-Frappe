@@ -18,15 +18,13 @@ class RequestPesananBarang(Document):
 			pesanan.id_supplier = self.id_supplier
 			pesanan.nama_supplier = self.nama_supplier
 			pesanan.tanggal_request = self.tanggal_request
-			pesanan.total_harga = self.total_harga
 			for i in self.request_line_pesanan:
 				pesanan.append('data_pesanan_barang',{
 					'kode_barang': i.kode_barang,
 					'nama_barang': i.nama_barang,
 					'jenis_barang': i.jenis_barang,
 					'qty': i.qty,
-					'satuan': i.satuan,
-					'harga': i.harga
+					'satuan': i.satuan
 				})
 			pesanan.save()
 			new_pesanan = frappe.get_doc("Pesanan", pesanan.name)

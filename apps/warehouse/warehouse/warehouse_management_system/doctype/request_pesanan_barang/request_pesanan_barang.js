@@ -4,9 +4,11 @@
 frappe.ui.form.on('Request Pesanan Barang', 'tanggal_request', function(frm) {
 	if(frm.doc.tanggal_request < get_today()) {
 		frm.set_value('tanggal_request','')
-			frappe.throw('Mohon Maaf Harus Memilih Tanggal Hari Ini')
+			frappe.throw('Mohon Maaf Harus Memilih Tanggal Hari Ini!!!!')
 	}
 });
+
+
 
 // frappe.ui.form.on('Request Line Pesanan', 'jumlah', function(frm) {
 //     if(frm.doc.jumlah != 0){
