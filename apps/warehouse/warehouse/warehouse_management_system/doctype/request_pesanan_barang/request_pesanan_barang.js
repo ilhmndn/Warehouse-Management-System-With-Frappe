@@ -8,10 +8,18 @@ frappe.ui.form.on('Request Pesanan Barang', 'tanggal_request', function(frm) {
 	}
 });
 
-
-
-// frappe.ui.form.on('Request Line Pesanan', 'jumlah', function(frm) {
-//     if(frm.doc.jumlah != 0){
-// 		frm.set_value('total_harga', 'harga' * 'jumlah');
-// 	}
+// cur_frm.set_query('kode_barang','request_line_pesanan', function(doc, cdt, cdn) {
+// 	var d = locals[cdt][cdn];
+// 	if(cur_frm.doc.jenis_barang == "Pasir"){
+// 	return {
+// 		filters: [
+// 			['Request Line Barang','jenis_barang','=','Pasir']
+// 		]
+// 	}}
+// 	else {
+// 		return {
+// 			filters: [
+// 				['Request Line Barang','jenis_barang','=','Batu Bata']
+// 			]
+// 	}}
 // });
