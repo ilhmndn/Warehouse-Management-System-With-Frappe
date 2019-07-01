@@ -24,7 +24,7 @@ frappe.ui.form.on("Request Line Pesanan", "qty", function(frm, cdt, cdn) {
 
 // cur_frm.set_query('kode_barang','request_line_pesanan', function(doc, cdt, cdn) {
 // 	var d = locals[cdt][cdn];
-// 	if(cur_frm.doc.jenis_barang == "Pasir"){
+// 	if(frm.doc.jenis_barang == "Pasir"){
 // 	return {
 // 		filters: [
 // 			['Request Line Barang','jenis_barang','=','Pasir']

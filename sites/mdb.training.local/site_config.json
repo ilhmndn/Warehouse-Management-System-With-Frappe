@@ -5,9 +5,9 @@
  "limits": {
   "space_usage": {
    "backup_size": 3.0,
-   "database_size": 24.29,
+   "database_size": 24.64,
    "files_size": 0.0,
-   "total": 27.29
+   "total": 27.64
   }
  }
 }

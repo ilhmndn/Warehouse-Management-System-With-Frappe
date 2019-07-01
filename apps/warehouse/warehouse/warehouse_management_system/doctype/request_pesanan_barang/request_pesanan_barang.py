@@ -27,6 +27,7 @@ class RequestPesananBarang(Document):
 					'qty': i.qty,
 					'satuan': i.satuan
 				})
+			pesanan.status = "Success"
 			pesanan.save()
 			new_pesanan = frappe.get_doc("Pesanan", pesanan.name)
 			frappe.msgprint("success to create Pesanan with Doc No. {}".format(new_pesanan.name))
@@ -35,6 +36,6 @@ class RequestPesananBarang(Document):
 	def change_qty_barang(self):
 		if(self.request_line_pesanan):
 			for i in self.request_line_pesanan:
-				barang = frappe.get_doc("Request Line Pesanan", i.kode_barang)
-				barang.qty = '0'
+				barang = frappe.get_doc("Request Line Barang", i.kode_barang)
+				barang.qty = int(barang.qty) - int(i.qty)
 				barang.save()
