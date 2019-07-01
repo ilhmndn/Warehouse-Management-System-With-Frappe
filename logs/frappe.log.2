@@ -1,285 +1,126 @@
-[DEBUG] 2019-06-30 20:28:26,433 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:29:26,767 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-07-01 13:01:52,175 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
 Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:29:26,830 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:30:26,983 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-07-01\",\"doctype\":\"Request Pesanan Barang\",\"request_line_barang\":[{\"name\":\"3bbe21623a\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_barang\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-008\",\"nama_barang\":\"Bata Ringan Citicon\",\"jenis_barang\":\"Bata Ringan\",\"qty\":\"100\",\"satuan\":\"M3\",\"doctype\":\"Request Line Barang\"}],\"__last_sync_on\":\"2019-07-01T06:01:46.778Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 22, in on_approve
+    for i in self.request_line_barang:
+AttributeError: 'RequestPesananBarang' object has no attribute 'request_line_pesanan'
+[ERROR] 2019-07-01 13:02:09,391 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
 Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:30:27,044 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:31:27,189 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-07-01\",\"doctype\":\"Request Pesanan Barang\",\"request_line_barang\":[{\"name\":\"3bbe21623a\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_barang\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-008\",\"nama_barang\":\"Bata Ringan Citicon\",\"jenis_barang\":\"Bata Ringan\",\"qty\":\"100\",\"satuan\":\"M3\",\"doctype\":\"Request Line Barang\"}],\"__last_sync_on\":\"2019-07-01T06:01:46.778Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 22, in on_approve
+    for i in self.request_line_barang:
+AttributeError: 'RequestPesananBarang' object has no attribute 'request_line_pesanan'
+[ERROR] 2019-07-01 13:03:04,295 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
 Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:31:27,290 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:32:27,525 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:32:27,785 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:33:27,931 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:33:28,009 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:34:28,142 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:34:28,242 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:35:28,404 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:35:28,471 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:36:28,779 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:36:29,007 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:37:29,156 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:37:29,215 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:38:29,417 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:38:29,516 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:39:29,673 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:39:29,740 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:40:29,962 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:40:30,178 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:41:30,334 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:41:30,399 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:42:30,580 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:42:30,649 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:43:30,818 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:43:30,871 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:44:31,369 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:44:31,588 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:45:31,722 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:45:31,778 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:46:31,925 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:46:31,981 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:47:32,131 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:47:32,181 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:48:32,649 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:48:32,805 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:49:32,944 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:49:32,988 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:50:33,106 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:50:33,148 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:51:33,320 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:51:33,381 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:52:33,656 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:52:33,924 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:53:34,493 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:53:34,575 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:54:34,850 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:54:34,996 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:55:35,455 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:55:35,566 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:56:35,892 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:56:36,105 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:57:36,316 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:57:36,381 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:58:36,554 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:58:36,617 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 20:59:36,764 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 20:59:36,846 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:00:37,145 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:00:37,469 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:01:37,594 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:01:37,801 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:02:37,954 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:02:38,005 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:03:38,145 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:03:38,221 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:04:38,439 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:04:38,698 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:05:38,843 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:05:38,894 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:06:39,104 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:06:39,164 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:07:39,300 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:07:39,355 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:08:39,633 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:08:39,874 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:09:40,061 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:09:40,116 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:10:40,337 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:10:40,380 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:11:40,568 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:11:40,621 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:12:40,863 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:12:41,038 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:13:41,236 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:13:41,288 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:14:41,460 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:14:41,513 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
-[DEBUG] 2019-06-30 21:15:41,721 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: mdb.training.local
-Queued events for site mdb.training.local
-[DEBUG] 2019-06-30 21:15:41,812 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
-Site: warehouse
-Queued events for site warehouse
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-015\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 13:03:01.895391\",\"modified\":\"2019-07-01 13:03:01.895391\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-07-01\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_barang\":[{\"name\":\"73ed4c70be\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 13:03:01.895391\",\"modified\":\"2019-07-01 13:03:01.895391\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-015\",\"parentfield\":\"request_line_barang\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"BARANG-008\",\"nama_barang\":\"Bata Ringan Citicon\",\"jenis_barang\":\"Bata Ringan\",\"qty\":\"20\",\"satuan\":\"M3\",\"doctype\":\"Request Line Barang\"}],\"__last_sync_on\":\"2019-07-01T06:03:02.149Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 22, in on_approve
+    for i in self.request_line_barang:
+AttributeError: 'RequestPesananBarang' object has no attribute 'request_line_pesanan'

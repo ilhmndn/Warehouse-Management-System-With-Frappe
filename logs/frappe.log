@@ -1,1173 +1,156 @@
-[ERROR] 2019-06-30 20:30:47,005 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'satuan': i.satuan
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:31:59,708 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'satuan': i.satuan
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:37:10,233 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:40:09,538 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:43:09,441 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:45:25,381 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:46:35,060 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:48:18,992 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:49:41,428 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 20:52:39,343 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:01:09,301 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:03:06,359 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:03:35,714 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:03:52,467 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:05:24,868 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:07:20,198 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:08:23,594 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:09:14,775 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:10:02,213 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:10:47,204 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:11:13,714 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:11:46,559 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
-[ERROR] 2019-06-30 21:12:30,805 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
-    response = frappe.handler.handle()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
-    data = execute_cmd(cmd)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
-    return frappe.call(method, **frappe.form_dict)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
-    return fn(*args, **newargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
-    doc.submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
-    self._submit()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
-    self.save()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
-    return self._save(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
-    self.run_post_save_methods()
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
-    self.run_method("on_submit")
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
-    out = Document.hook(fn)(self, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
-    return composed(self, method, *args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
-    add_to_return_value(self, fn(self, *args, **kwargs))
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
-    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
-    self.on_approve()
-  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 27, in on_approve
-    'qty': i.qty,
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 138, in append
-    value = self._init_child(value, key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 173, in _init_child
-    value["doctype"] = self.get_table_field_doctype(key)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
-    return self.meta.get_field(fieldname).options
-AttributeError: 'NoneType' object has no attribute 'options'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
-    if type(value)==str and value.startswith(b"u'"):
-TypeError: startswith first arg must be str or a tuple of str, not bytes
+[DEBUG] 2019-07-01 13:11:52,841 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:11:52,883 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:12:53,089 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:12:53,256 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:13:53,392 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:13:53,435 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:14:53,576 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:14:53,638 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:15:53,790 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:15:53,842 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:16:54,066 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:16:54,276 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:17:54,474 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:17:54,581 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:18:54,807 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:18:54,855 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:19:55,009 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:19:55,059 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:20:55,245 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:20:55,386 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:21:56,357 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:21:56,446 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:22:56,605 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:22:56,656 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:23:56,796 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:23:56,845 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:24:57,148 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:24:57,430 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:25:57,608 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:25:57,717 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:26:57,866 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:26:57,907 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:27:58,040 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:27:58,088 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:28:58,322 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:28:58,544 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:29:58,691 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:29:58,776 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:30:59,568 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:30:59,713 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:31:59,859 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:31:59,902 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:33:00,148 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:33:00,437 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:34:00,583 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:34:00,648 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:35:00,793 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:35:00,848 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:36:01,144 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:36:01,301 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:37:01,463 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:37:01,513 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
