@@ -1,11 +1,5 @@
-[ERROR] 2019-06-30 20:30:46,993 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-013\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:26:35.733811\",\"modified\":\"2019-06-30 20:26:35.733811\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":\"1500000\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"64bc8fd30b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:26:35.733811\",\"modified\":\"2019-06-30 20:26:35.733811\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-013\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:30:16.061Z\"}"
-}
-Request Error
+[ERROR] 2019-06-30 20:30:47,005 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -46,14 +40,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:31:59,692 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-013\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:26:35.733811\",\"modified\":\"2019-06-30 20:26:35.733811\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-002\",\"nama_supplier\":\"PT Jaya Abadi\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":\"1500000\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"64bc8fd30b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:26:35.733811\",\"modified\":\"2019-06-30 20:26:35.733811\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-013\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:31:47.820Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:31:59,708 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -94,14 +91,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:37:10,213 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:37:07.795759\",\"modified\":\"2019-06-30 20:37:07.795759\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"6ff4f9c552\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:37:07.795759\",\"modified\":\"2019-06-30 20:37:07.795759\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:37:08.005Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:37:10,233 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -142,14 +142,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:40:09,528 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-015\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:40:05.410990\",\"modified\":\"2019-06-30 20:40:05.410990\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-001\",\"nama_supplier\":\"Ilham Aminudin\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"9c24243ea3\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:40:05.410990\",\"modified\":\"2019-06-30 20:40:05.410990\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-015\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:40:05.614Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:40:09,538 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -190,14 +193,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:43:09,420 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-015\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:40:05.410990\",\"modified\":\"2019-06-30 20:40:05.410990\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-001\",\"nama_supplier\":\"Ilham Aminudin\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"9c24243ea3\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:40:05.410990\",\"modified\":\"2019-06-30 20:40:05.410990\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-015\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:42:42.579Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:43:09,441 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -238,14 +244,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:45:25,364 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-016\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:45:23.231322\",\"modified\":\"2019-06-30 20:45:23.231322\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"4c1dedcd20\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:45:23.231322\",\"modified\":\"2019-06-30 20:45:23.231322\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-016\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:45:23.449Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:45:25,381 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -286,14 +295,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:46:35,042 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"afdf5e05b0\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:46:32.722Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:46:35,060 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -334,14 +346,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:48:18,969 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"afdf5e05b0\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:46:32.722Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:48:18,992 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -382,14 +397,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:49:41,405 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"afdf5e05b0\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:49:38.231Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:49:41,428 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -430,14 +448,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 20:52:39,329 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"afdf5e05b0\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 20:46:32.430902\",\"modified\":\"2019-06-30 20:46:32.430902\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T13:49:38.231Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 20:52:39,343 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -478,14 +499,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:01:09,278 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-013\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:01:06.602338\",\"modified\":\"2019-06-30 21:01:06.602338\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5eeefefea7\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:01:06.602338\",\"modified\":\"2019-06-30 21:01:06.602338\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-013\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:01:06.855Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:01:09,301 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -526,14 +550,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:03:06,342 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:04.113029\",\"modified\":\"2019-06-30 21:03:04.113029\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"81519ec3b4\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:04.113029\",\"modified\":\"2019-06-30 21:03:04.113029\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:03:04.363Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:03:06,359 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -574,14 +601,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:03:35,697 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:04.113029\",\"modified\":\"2019-06-30 21:03:04.113029\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"81519ec3b4\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:04.113029\",\"modified\":\"2019-06-30 21:03:04.113029\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:03:31.326Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:03:35,714 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -622,14 +652,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:03:52,451 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-015\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:50.176785\",\"modified\":\"2019-06-30 21:03:50.176785\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"089db80278\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:03:50.176785\",\"modified\":\"2019-06-30 21:03:50.176785\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-015\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:03:50.430Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:03:52,467 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -670,14 +703,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:05:24,850 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-016\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:05:22.549941\",\"modified\":\"2019-06-30 21:05:22.549941\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cea59a2dc3\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:05:22.549941\",\"modified\":\"2019-06-30 21:05:22.549941\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-016\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:05:22.736Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:05:24,868 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -718,14 +754,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:07:20,177 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:07:17.984984\",\"modified\":\"2019-06-30 21:07:17.984984\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5b56244859\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:07:17.984984\",\"modified\":\"2019-06-30 21:07:17.984984\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:07:18.200Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:07:20,198 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -766,14 +805,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:08:23,577 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-017\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:07:17.984984\",\"modified\":\"2019-06-30 21:07:17.984984\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"5b56244859\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:07:17.984984\",\"modified\":\"2019-06-30 21:07:17.984984\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-017\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"202b4d097d\",\"kode_barang2\":\"BARANG-003\",\"nama_barang\":\"Pasir Lumajang\",\"jenis_barang\":\"Pasir\",\"qty\":\"200\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:08:19.207Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:08:23,594 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -814,14 +856,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:09:14,758 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":null,\"parentfield\":null,\"parenttype\":null,\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"total_harga\":null,\"amended_from\":null,\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:09:11.566Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:09:14,775 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -862,14 +907,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:10:02,199 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:09:41.870Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:10:02,213 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -910,14 +958,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:10:47,188 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:10:43.723Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:10:47,204 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -958,14 +1009,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:11:13,697 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:11:08.102Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:11:13,714 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -1006,14 +1060,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:11:46,536 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:11:32.990Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:11:46,559 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -1054,14 +1111,17 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
-[ERROR] 2019-06-30 21:12:30,781 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
-Site: mdb.training.local
-Form Dict: {
- "action": "Submit",
- "cmd": "frappe.desk.form.save.savedocs",
- "doc": "{\"name\":\"RPB-018\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-06-30\",\"doctype\":\"Request Pesanan Barang\",\"request_line_pesanan\":[{\"name\":\"cb4691541b\",\"owner\":\"Administrator\",\"creation\":\"2019-06-30 21:09:11.307247\",\"modified\":\"2019-06-30 21:09:11.307247\",\"modified_by\":\"Administrator\",\"parent\":\"RPB-018\",\"parentfield\":\"request_line_pesanan\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"docstatus\":0,\"kode_barang\":\"ce5591dc39\",\"kode_barang2\":\"BARANG-004\",\"nama_barang\":\"Pasir Kediri\",\"jenis_barang\":\"Pasir\",\"qty\":\"100\",\"satuan\":\"Ton\",\"doctype\":\"Request Line Pesanan\"}],\"__last_sync_on\":\"2019-06-30T14:12:14.189Z\"}"
-}
-Request Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[ERROR] 2019-06-30 21:12:30,805 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
 Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
     response = frappe.handler.handle()
@@ -1102,3 +1162,327 @@ Traceback (most recent call last):
   File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/base_document.py", line 287, in get_table_field_doctype
     return self.meta.get_field(fieldname).options
 AttributeError: 'NoneType' object has no attribute 'options'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[DEBUG] 2019-07-01 12:33:41,454 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:33:42,214 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:34:42,402 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:34:42,498 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:35:42,652 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:35:42,724 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:36:42,944 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:36:43,096 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:37:43,240 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:37:43,294 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:38:43,479 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:38:43,521 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:39:43,704 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:39:43,814 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:40:44,108 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:40:44,286 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:41:44,470 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:41:44,526 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:42:44,749 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:42:44,824 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:43:44,985 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:43:45,043 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:44:45,266 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:44:45,373 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:45:45,517 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:45:45,573 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:46:45,736 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:46:45,791 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:47:45,951 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:47:46,041 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:48:46,298 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:48:46,462 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:49:46,592 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:49:46,651 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:50:46,788 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:50:46,837 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:51:47,235 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:51:47,285 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:52:47,518 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:52:47,680 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:53:47,828 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:53:47,886 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:54:48,034 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:54:48,080 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:55:48,241 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:55:48,298 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:56:48,536 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:56:48,694 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:57:48,869 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:57:48,938 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:58:49,127 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:58:49,190 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 12:59:49,329 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 12:59:49,372 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[ERROR] 2019-07-01 13:00:26,353 | /home/ilhmndn/frappe-training/apps/frappe/frappe/app.py:
+Site: mdb.training.local
+Form Dict: {
+ "action": "Submit",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"name\":\"RPB-014\",\"owner\":\"Administrator\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"RPB-.###\",\"id_supplier\":\"SUPPLIER-003\",\"nama_supplier\":\"Ihsan\",\"tanggal_request\":\"2019-07-01\",\"doctype\":\"Request Pesanan Barang\",\"request_line_barang\":[{\"docstatus\":0,\"doctype\":\"Request Line Barang\",\"name\":\"3bbe21623a\",\"owner\":\"Administrator\",\"parent\":\"RPB-014\",\"parentfield\":\"request_line_barang\",\"parenttype\":\"Request Pesanan Barang\",\"idx\":1,\"nama_barang\":\"Bata Ringan Citicon\",\"jenis_barang\":\"Bata Ringan\",\"satuan\":\"M3\",\"kode_barang\":\"BARANG-008\",\"qty\":\"100\",\"creation\":\"2019-07-01 12:58:15.714464\",\"modified\":\"2019-07-01 13:00:23.978419\",\"modified_by\":\"Administrator\"}]}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 22, in on_approve
+    for i in self.request_line_pesanan:
+AttributeError: 'RequestPesananBarang' object has no attribute 'request_line_pesanan'
+[ERROR] 2019-07-01 13:00:26,699 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: startswith first arg must be str or a tuple of str, not bytes
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/__init__.py", line 1019, in call
+    return fn(*args, **newargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/desk/form/save.py", line 19, in savedocs
+    doc.submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 848, in submit
+    self._submit()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 837, in _submit
+    self.save()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 313, in _save
+    self.run_post_save_methods()
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 908, in run_post_save_methods
+    self.run_method("on_submit")
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 13, in on_submit
+    self.on_approve()
+  File "/home/ilhmndn/frappe-training/apps/warehouse/warehouse/warehouse_management_system/doctype/request_pesanan_barang/request_pesanan_barang.py", line 22, in on_approve
+    for i in self.request_line_pesanan:
+AttributeError: 'RequestPesananBarang' object has no attribute 'request_line_pesanan'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/ilhmndn/frappe-training/apps/frappe/frappe/utils/error.py", line 131, in get_snapshot
+    if type(value)==str and value.startswith(b"u'"):
+TypeError: startswith first arg must be str or a tuple of str, not bytes
+[DEBUG] 2019-07-01 13:00:49,718 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:00:49,954 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:01:50,106 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:01:50,160 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:02:50,329 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:02:50,397 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:03:50,774 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:03:50,923 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:04:51,136 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:04:51,331 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:05:51,481 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:05:51,522 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:06:51,668 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:06:51,721 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:07:51,871 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:07:51,928 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:08:52,145 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:08:52,298 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:09:52,442 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:09:52,513 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-01 13:10:52,649 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-01 13:10:52,702 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
