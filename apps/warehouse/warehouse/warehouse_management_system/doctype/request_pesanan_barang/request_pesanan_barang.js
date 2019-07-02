@@ -9,7 +9,6 @@ frappe.ui.form.on('Request Pesanan Barang', 'tanggal_request', function(frm) {
 	}
 });
 
-
 frappe.ui.form.on("Request Line Pesanan", "qty", function(frm, cdt, cdn) {
 
 	var harga = frm.doc.request_line_pesanan;
@@ -18,13 +17,29 @@ frappe.ui.form.on("Request Line Pesanan", "qty", function(frm, cdt, cdn) {
 	for(var i in harga) {
 	total_harga = (total_harga + (parseInt(harga[i].qty) * parseInt(harga[i].harga)))
 	 }
-		frm.set_value("total_harga",total_harga) 
-	
+	 frappe.call({
+		method :"frappe.client.get",
+		args:{
+			doctype : "Master Supplier",
+			name : frm.doc.id_supplier
+		},
+		
+		callback:function (r){
+			if (r.message.jenis_supplier == 'Perorangan'){
+				total_harga = total_harga - total_harga * 10/100;
+				frm.set_value('total_harga',total_harga);
+			}
+			else{
+				total_harga = total_harga - total_harga * 20/100;
+				frm.set_value('total_harga',total_harga);
+			}
+		}
+	});
   });
 
 // cur_frm.set_query('kode_barang','request_line_pesanan', function(doc, cdt, cdn) {
 // 	var d = locals[cdt][cdn];
-// 	if(frm.doc.jenis_barang == "Pasir"){
+// 	if(frm.doc.nama_barang % "Pasir"){
 // 	return {
 // 		filters: [
 // 			['Request Line Barang','jenis_barang','=','Pasir']
@@ -33,7 +48,7 @@ frappe.ui.form.on("Request Line Pesanan", "qty", function(frm, cdt, cdn) {
 // 	else {
 // 		return {
 // 			filters: [
-// 				['Request Line Barang','jenis_barang','=','Batu Bata']
+// 				['Request Line Barang','jenis_barang','=','Batu Ringan']
 // 			]
 // 	}}
 // });

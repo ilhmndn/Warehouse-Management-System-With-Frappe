@@ -25,7 +25,7 @@
 		frm.set_value('sisa_penyimpanan',frm.doc.kapasitas_penyimpanan - frm.doc.total_jumlah_barang)
 
 		if(cur_frm.doc.sisa_penyimpanan < 0) {
-			frm.set_value('sisa_penyimpanan', 'Error')
+			frm.set_value('sisa_penyimpanan', '')
 			frm.set_value('status','Penuh')
 				frappe.throw('kapasitas gudang sudah penuh')
 		}
