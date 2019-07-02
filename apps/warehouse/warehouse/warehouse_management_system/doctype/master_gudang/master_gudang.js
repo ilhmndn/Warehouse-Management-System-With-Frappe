@@ -8,7 +8,7 @@
 // });
 
   frappe.ui.form.on("Request Line Barang", "qty", function(frm, cdt, cdn) {
-
+	
 	var barang = frm.doc.request_line_barang;
 	var total_jumlah_barang = 0
 	var kapasitas_penyimpanan = cur_frm.doc.kapasitas_penyimpanan
@@ -16,12 +16,14 @@
 	for(var i in barang) {
 	total_jumlah_barang = (total_jumlah_barang + parseInt(barang[i].qty))
 	 }
- 
 	 frm.set_value("total_jumlah_barang",total_jumlah_barang) 
-  });
+  }
+  
+  );
 
   frappe.ui.form.on('Master Gudang', 'total_jumlah_barang', function(frm) {
     {
+	
 		frm.set_value('sisa_penyimpanan',frm.doc.kapasitas_penyimpanan - frm.doc.total_jumlah_barang)
 
 		if(cur_frm.doc.sisa_penyimpanan < 0) {

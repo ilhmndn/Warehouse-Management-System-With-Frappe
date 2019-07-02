@@ -4,10 +4,10 @@
  "developer_mode": 1,
  "limits": {
   "space_usage": {
-   "backup_size": 2.0,
-   "database_size": 27.44,
+   "backup_size": 5.0,
+   "database_size": 28.3,
    "files_size": 0.0,
-   "total": 29.44
+   "total": 33.3
   }
  }
 }
