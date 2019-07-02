@@ -893,3 +893,33 @@ Queued events for site mdb.training.local
 [DEBUG] 2019-07-02 07:39:12,210 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
 Site: warehouse
 Queued events for site warehouse
+[DEBUG] 2019-07-02 07:40:12,408 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-02 07:40:12,574 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-02 07:41:12,750 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-02 07:41:12,804 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-02 07:42:12,965 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-02 07:42:13,042 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-02 07:43:13,204 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-02 07:43:13,257 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
+[DEBUG] 2019-07-02 07:44:13,611 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: mdb.training.local
+Queued events for site mdb.training.local
+[DEBUG] 2019-07-02 07:44:13,785 | /home/ilhmndn/frappe-training/apps/frappe/frappe/utils/scheduler.py:
+Site: warehouse
+Queued events for site warehouse
